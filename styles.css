@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.gantt-container {
+    display: grid;
+    grid-template-columns: 200px repeat(14, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.header {
+    display: contents;
+}
+
+.activity-header, .week-header {
+    font-weight: bold;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.activity-title {
+    background-color: #f2f2f2;
+    padding: 8px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    grid-column: 1 / 2;
+}
+
+.sub-activity {
+    margin-left: 20px;
+}
+
+.task-bar {
+    background-color: #4caf91;
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.task-bar1 {
+    background-color: #4CAF50;
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.task-bar2 {
+    background-color: #4caf91;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sub-activity .task-bar {
+    background-color: #8BC34A;
+}
+
+.task-bar::before,
+.task-bar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.sub-activity .task-bar::before,
+.sub-activity .task-bar::after {
+    background-color: #8BC34A;
+}
+
+.task-bar::before {
+    left: 0;
+}
+
+.task-bar::after {
+    right: 0;
+}
